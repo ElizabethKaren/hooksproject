@@ -1,10 +1,11 @@
 .App {
   font-size: x-large;
   font-weight: bold;
-  color: #9D8189;
-  text-shadow: 1px 1px #FFE5D9;
+  color: #FFE5D9;
+  text-shadow: 1px 1px #9D8189;
   font-family: 'Shadows Into Light', cursive;
   text-align: center;
+  align-items: center;
 }
 
 .food{
@@ -18,21 +19,30 @@
 }
 
 .food:hover{
-  background-color: #D8E2DC;
+  background-color: #a8f5c7;
+  color: #9D8189;
+  text-shadow: none;
 }
 
 .foodList{
-  background: #FFE5D9;
+  background: #f3778a;
   border-radius: 4px;
   padding: 5px;
-  max-width: 400px;
-  margin-left: 20%;
+  width: fit-content;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+h2{
+  color: #f3778a;
+  text-shadow: 2px 2px #9D8189;
+  font-weight: bolder;
 }
 
 button{
   color: #9D8189;
-  background-color: #FFCAD4;
-  text-shadow: 1px 1px #FFE5D9;
+  background-color: #F4ACB7;
+  text-shadow: 1px 1px #9D8189;
   font-size: x-large;
   font-weight: bold;
   font-family: 'Shadows Into Light', cursive;
@@ -57,5 +67,5 @@ input{
 }
 
 input:hover{
-  background-color: #D8E2DC;
+  background-color: #a8f5c7;
 }
