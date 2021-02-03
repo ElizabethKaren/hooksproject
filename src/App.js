@@ -53,7 +53,7 @@ function App() {
   return (
     <div className="App">
       <h2>Grocery List</h2>
-      <label className='food' onClick={clearList}>X</label>
+      <label className='food' id='x' onClick={clearList}>x</label>
       <div className='foodList'>
         {food.map((thing, index) => <FoodItem gotItem={gotItem} key={index} food={thing} index={index} /> )}
         <AddFood addItem={addItem} />

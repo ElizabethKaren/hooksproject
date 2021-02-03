@@ -8,6 +8,12 @@
   align-items: center;
 }
 
+#x{
+  width: fit-content;
+  margin-left: 60%;
+  margin-right: auto;
+}
+
 .food{
  box-shadow: 1px 1px 1px #9D8189;
  padding: 3px 10px;
