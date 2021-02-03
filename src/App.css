@@ -1,38 +1,51 @@
 .App {
+  font-size: x-large;
+  font-weight: bold;
+  color: #9D8189;
+  text-shadow: 1px 1px #FFE5D9;
+  font-family: 'Shadows Into Light', cursive;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.food{
+ box-shadow: 1px 1px 1px #9D8189;
+ padding: 3px 10px;
+ margin-bottom: 6px;
+ border-radius: 3px;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.food:hover{
+  background-color: #D8E2DC;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.foodList{
+  background: #FFE5D9;
+  border-radius: 4px;
+  padding: 5px;
+  max-width: 400px;
+  margin-left: 20%;
 }
 
-.App-link {
-  color: #61dafb;
+button{
+  color: #9D8189;
+  background-color: #FFCAD4;
+  text-shadow: 1px 1px #FFE5D9;
+  font-size: x-large;
+  font-weight: bold;
+  font-family: 'Shadows Into Light', cursive;
+  background-color: none;
+  border: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover{
+  text-shadow: none;
+  color: #D8E2DC; 
+  background-color: #9D8189;
+}
+
+input{
+  color: #FFE5D9;
 }
