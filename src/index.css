@@ -10,6 +10,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body:hover h2{
+  text-shadow: none;
+  color: #97596a;
+  background-color: #a8f5c7;
+  box-shadow: 1px 1px 1px #9D8189;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

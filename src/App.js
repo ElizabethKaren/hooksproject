@@ -21,11 +21,13 @@ function App() {
   ]);
 
   useEffect(() => {
-    // if (localStorage.getItem('food') && localStorage.getItem('food') != []){
-    //   const newfood = JSON.parse(localStorage.getItem('food'))
-    //   setFood(newfood)
-    // } else {
-    //   localStorage.setItem('food', JSON.stringify(food) )
+    // function handleStatusChange () {
+    //   if (localStorage.getItem('food') && localStorage.getItem('food') != []){
+    //     const newfood = JSON.parse(localStorage.getItem('food'))
+    //     setFood(newfood)
+    //   } else {
+    //     localStorage.setItem('food', JSON.stringify(food) )
+    //   }
     // }
   });
 
