@@ -20,21 +20,28 @@ function App() {
     }
   ]);
 
-  useEffect(() => {
-    // function handleStatusChange () {
-    //   if (localStorage.getItem('food') && localStorage.getItem('food') != []){
-    //     const newfood = JSON.parse(localStorage.getItem('food'))
-    //     setFood(newfood)
-    //   } else {
-    //     localStorage.setItem('food', JSON.stringify(food) )
-    //   }
+  const settingState = () => {
+    // let newList = food
+    // if (!localStorage.getItem('food')){
+    //     if (localStorage.getItem('food')){
+    //       const newfood = JSON.parse(localStorage.getItem('food'))
+    //       newList = newfood
+    //     } else {
+    //       localStorage.setItem('food', JSON.stringify(food))
+    //     }
+    // } else {
+    //   const newfood = JSON.parse(localStorage.getItem('food'))
+    //   newList = newfood
     // }
-  });
+    // setFood(newList)
+  }
+
+  useEffect(() => settingState())
 
   const clearList = () => {
     const newList = []
     setFood(newList)
-    localStorage.setItem('food', JSON.stringify(newList) )
+    localStorage.setItem('food', JSON.stringify(null) )
   }
 
   const addItem = item => {
