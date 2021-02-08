@@ -20,25 +20,23 @@ function App() {
     }
   ]);
 
-  // const settingState = () => {
-  //   let newList = food
-  //   if (!localStorage.getItem('food')){
-  //       if (localStorage.getItem('food')){
-  //         const newfood = JSON.parse(localStorage.getItem('food'))
-  //         newList = newfood
-  //       } else {
-  //         localStorage.setItem('food', JSON.stringify(food))
-  //       }
-  //   } else {
-  //     const newfood = JSON.parse(localStorage.getItem('food'))
-  //     newList = newfood
-  //   }
-  //   setFood(newList)
-  // }
+  const settingState = () => {
+    let newList = food
+    if (!localStorage.getItem('food')){
+        if (localStorage.getItem('food')){
+          const newfood = JSON.parse(localStorage.getItem('food'))
+          newList = newfood
+        } else {
+          localStorage.setItem('food', JSON.stringify(food))
+        }
+    } else {
+      const newfood = JSON.parse(localStorage.getItem('food'))
+      newList = newfood
+    }
+    setFood(newList)
+  }
 
-  useEffect(() => {
-    setFood(JSON.parse(localStorage.getItem('food')))
-  }, [JSON.parse(localStorage.getItem('food'))]);
+  useEffect(settingState, [])
 
   const clearList = () => {
     const newList = []
@@ -50,7 +48,6 @@ function App() {
     const newFood = [...food, item ]
     setFood(newFood)
     localStorage.setItem('food', JSON.stringify(newFood) )
-
   }
 
   const gotItem = index => {
