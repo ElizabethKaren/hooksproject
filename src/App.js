@@ -57,13 +57,15 @@ function App() {
     localStorage.setItem('food', JSON.stringify(newFoods) )
   }
 
+  const removeItem = index => console.log(index)
+
   if (food === []) return <div className="App"><h2>Grocery List</h2><br/><div className='foodList'><AddFood addItem={addItem} /></div></div>
   return (
     <div className="App">
       <h2>Grocery List</h2>
       <label className='food' id='x' onClick={clearList}>x</label>
       <div className='foodList'>
-        {food.map((thing, index) => <FoodItem gotItem={gotItem} key={index} food={thing} index={index} /> )}
+        {food.map((thing, index) => <FoodItem removeItem={removeItem} gotItem={gotItem} key={index} food={thing} index={index} /> )}
         <AddFood addItem={addItem} />
       </div>
     </div>
