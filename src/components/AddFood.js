@@ -9,16 +9,11 @@ function AddFood ({ addItem }){
         addItem({ food: value, got: false })
         setValue('')
     }
-
-    const handleOnChange = e => {
-        console.log(e.target)
-        setValue(e.target.value)
-    }
     
     return ( 
     <div>
         <form onSubmit={handleSubmit}>
-        <input type='text' value={value} onChange={(e) => handleOnChange(e) }/>
+        <input type='text' value={value} onChange={e => setValue(e.target.value) }/>
         </form>
     </div>
     )
