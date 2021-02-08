@@ -2,17 +2,14 @@ import React from 'react'
 
 function FoodItem({ food, index, gotItem, removeItem }){
 
-    const updateGot = (e, index) => {
-      if(e.which==1){ 
-        removeItem(index)
-     } else {
-       gotItem(index)
-     }
+    const handleKeyPress = (e, index) =>{
+      console.dir(e)
+      removeItem(index)
     }
 
 
     return (
-      <div className='food' onClick={(e) => updateGot(e, index)}>
+      <div className='food' onKeyDown={(e) => handleKeyPress(e, index)} onClick={() => gotItem(index)}>
         {food.food} &nbsp; {food.got ? '✔️' : ''}
       </div>
     )
