@@ -24,14 +24,12 @@ function App() {
     let newList = food
     if (!localStorage.getItem('food')){
         if (localStorage.getItem('food')){
-          const newfood = JSON.parse(localStorage.getItem('food'))
-          newList = newfood
+          newList = JSON.parse(localStorage.getItem('food'))
         } else {
           localStorage.setItem('food', JSON.stringify(food))
         }
     } else {
-      const newfood = JSON.parse(localStorage.getItem('food'))
-      newList = newfood
+      newList = JSON.parse(localStorage.getItem('food'))
     }
     setFood(newList)
   }
