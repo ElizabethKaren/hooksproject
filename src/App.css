@@ -44,6 +44,11 @@ h2{
   text-shadow: 2px 2px #69575c;
   font-weight: bolder;
 }
+#directions{
+  color: #f3778a;
+  text-shadow: 1px 1px #69575c;
+  margin-top: -10px;
+}
 button{
   color: #9D8189;
   background-color: #F4ACB7;

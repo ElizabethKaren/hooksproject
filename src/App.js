@@ -41,7 +41,7 @@ function App() {
   const clearList = () => {
     const newList = []
     setFood(newList)
-    localStorage.setItem('food', JSON.stringify(null) )
+    localStorage.removeItem('food' )
   }
 
   const addItem = item => {
@@ -57,12 +57,17 @@ function App() {
     localStorage.setItem('food', JSON.stringify(newFoods) )
   }
 
-  const removeItem = index => console.log(index)
+  const removeItem = item => {
+    const newFoodArray = food.filter(food => food.food !== item )
+    setFood(newFoodArray)
+    localStorage.setItem('food', JSON.stringify(newFoodArray) )
+  }
 
   if (food === []) return <div className="App"><h2>Grocery List</h2><br/><div className='foodList'><AddFood addItem={addItem} /></div></div>
   return (
     <div className="App">
       <h2>Grocery List</h2>
+      <p id='directions'>Click to check off an item and double click to delete an item</p>
       <label className='food' id='x' onClick={clearList}>x</label>
       <div className='foodList'>
         {food.map((thing, index) => <FoodItem removeItem={removeItem} gotItem={gotItem} key={index} food={thing} index={index} /> )}
