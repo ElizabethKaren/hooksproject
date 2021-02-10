@@ -20,14 +20,14 @@ function App() {
     }
   ]);
 
-  const settingState = (array) => {
+  const settingState = array => {
     let newList = array
     if (!localStorage.getItem('food')){
-        if (localStorage.getItem('food')){
-          newList = JSON.parse(localStorage.getItem('food'))
-        } else {
+        // if (localStorage.getItem('food')){
+        //   newList = JSON.parse(localStorage.getItem('food'))
+        // } else {
           localStorage.setItem('food', JSON.stringify(array))
-        }
+        // }
     } else {
       newList = JSON.parse(localStorage.getItem('food'))
     }
