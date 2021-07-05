@@ -6,6 +6,7 @@ function AddFood ({ addItem }){
     const handleSubmit = e =>{
         e.preventDefault()
         if (!value) return
+
         addItem({ food: value, got: false })
         setValue('')
     }
